@@ -12,3 +12,4 @@ pip install django（基于python3）
 
 python manage.py startapp api(app名称)
 
++ 新建app后，需要在setting中添加该应用
