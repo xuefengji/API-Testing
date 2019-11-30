@@ -2,8 +2,9 @@ from django.shortcuts import render
 from django.http.response import HttpResponse
 from django.shortcuts import render
 import json
-
+import requests
 # Create your views here.
+
 
 def Login(request):
     if request.method == 'POST':
