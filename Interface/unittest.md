@@ -21,6 +21,12 @@
 
 上述3中添加的case中有被@unittest.skip修饰时，该case不会被执行
 
+# case关联
+
+当执行case的时候，如果当前case的参数需要使用到上一个case的返回值，需要进行关联，可以将该返回值进行global声明
+
+
+
 # case执行顺序
 
 根据测试case的命令进行升序执行
