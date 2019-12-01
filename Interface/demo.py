@@ -1,6 +1,6 @@
 import unittest
 
-class demo(unittest.TestCase):
+class Demo(unittest.TestCase):
     @classmethod    #表示类方法，只调用一次
     def setUpClass(cls):
         print('这是类开始的方法')
@@ -19,7 +19,7 @@ class demo(unittest.TestCase):
     def test_01(self):
         print('这是第一个方法')
 
-    def test_02(self):
+    def test_03(self):
         print('这是第二个方法')
 
 
