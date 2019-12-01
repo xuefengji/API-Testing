@@ -1,5 +1,7 @@
 import unittest
+import HTMLTestRunner
 from post import Run_Main
+from demo import Demo
 
 
 class TestMethod(unittest.TestCase):
@@ -29,7 +31,11 @@ if __name__=='__main__':
     #使用unittest中的main函数执行case:
     # unittest.main()
     #使用unittest的TestSuite执行case：
+    filepath = './report/htmlreport.html'
+    fp = open(filepath,'wb')
     suite = unittest.TestSuite()
     # suite.addTest(TestMethod("test_01"))
-    suite.addTests([TestMethod("test_01"),TestMethod("test_02")])
-    unittest.TextTestRunner().run(suite)
+    suite.addTests([TestMethod("test_01"),TestMethod("test_02"),Demo("test_03")])
+    # unittest.TextTestRunner().run(suite)
+    runner = HTMLTestRunner.HTMLTestRunner(stream=fp,title='接口测试报告')
+    runner.run(suite)
