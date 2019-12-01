@@ -1,7 +1,9 @@
 import unittest
 from post import Run_Main
 
+
 class TestMethod(unittest.TestCase):
+
     def setUp(self):
         self.url = 'http://127.0.0.1:8000/login/'
         self.run = Run_Main()
@@ -12,7 +14,9 @@ class TestMethod(unittest.TestCase):
         self.assertEqual(data['password'], 1111111, '测试失败')
 
         print(res)
-    @unittest.skip
+
+        #设置跳过
+    # @unittest.skip
     def test_02(self):
         data = {'username': 'wewewee', 'password': 2222222}
         res = self.run.run_main(self.url, data, 'GET')
@@ -23,8 +27,9 @@ class TestMethod(unittest.TestCase):
 
 if __name__=='__main__':
     #使用unittest中的main函数执行case:
-    unittest.main()
+    # unittest.main()
     #使用unittest的TestSuite执行case：
-    # suite = unittest.TestSuite()
-    # suite.addTest(TestMethod('test_01'))
-    # unittest.TextTestRunner.run(suite)
+    suite = unittest.TestSuite()
+    # suite.addTest(TestMethod("test_01"))
+    suite.addTests([TestMethod("test_01"),TestMethod("test_02")])
+    unittest.TextTestRunner().run(suite)
