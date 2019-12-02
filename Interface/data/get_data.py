@@ -34,3 +34,7 @@ class GetData:
         method_data = self.data.cell_value(row,col)
         data = OperationJson().get_login_data(method_data)
         return data
+    def expact_result(self,row):
+        col = get_expact_result()
+        expact = self.data.cell_value(row,col)
+        return expact
