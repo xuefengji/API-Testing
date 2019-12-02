@@ -15,8 +15,8 @@ class OperationJson:
             return data
 
     #获取login数据
-    def get_login_data(self):
-        data = self.data['login']
+    def get_login_data(self,id):
+        data = self.data[id]
         return data
 
 
