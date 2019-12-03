@@ -4,11 +4,11 @@ from config.data_config import *
 
 class GetData:
     def __int__(self):
-        self.data = OperationExcel().get_data()
+        self.data = OperationExcel()
     def is_run(self,row):
         flag = None
         col = get_is_run()
-        isrun = self.data.cell_value(row,col)
+        isrun = self.data.get_cell_value(row,col)
         if isrun == 'yes':
             flag = True
         else:
