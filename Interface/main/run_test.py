@@ -25,7 +25,7 @@ class RunMain:
 
 if __name__=='__main__':
     run = RunMain()
-    print(run.run_test())
+    print(run.go_on_run())
 
 
 
