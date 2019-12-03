@@ -16,22 +16,22 @@ class GetData:
         return flag
     def request_url(self,row):
         col = get_url()
-        url = self.data.cell_value(row,col)
+        url = self.data.get_cell_value(row,col)
         return url
     def get_method_way(self,row):
         col = get_request_way()
-        method_way = self.data.cell_value(row,col)
+        method_way = self.data.get_cell_value(row,col)
         return method_way
     def get_is_header(self,row):
         col = get_header()
-        is_header = self.data.cell_value(row,col)
+        is_header = self.data.get_cell_value(row,col)
         if is_header == '':
             return None
         else:
             return is_header
     def get_method_data(self,row):
         col = get_data()
-        method_data = self.data.cell_value(row,col)
+        method_data = self.data.get_cell_value(row,col)
         data = OperationJson().get_login_data(method_data)
         return data
     def expact_result(self,row):

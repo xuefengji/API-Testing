@@ -24,7 +24,7 @@ class OperationExcel:
 
     #得到具体单元格数据
     def get_cell_value(self,row,col):
-        data = self.data.cell(row,col)
+        data = self.data.cell_value(row,col)
         return data
 
 if __name__=='__main__':
