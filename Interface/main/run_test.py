@@ -10,6 +10,7 @@ class RunMain:
 
     def go_on_run(self):
         rows_count = self.opera_excel.get_rows()
+
         for i in range(1,rows_count):
             url = self.data.request_url(i)
             request_data = self.data.get_method_data(i)
@@ -17,7 +18,7 @@ class RunMain:
             request_way = self.data.get_method_way(i)
             is_run = self.data.is_run(i)
             if is_run:
-                res = self.run_method.run_main(request_way,url,request_data,header)
+                res = self.run_method.run_main(request_way,url,request_data)
             return res
 
 
