@@ -1,6 +1,6 @@
-from utils.operationexcle import OperationExcel
-from utils.operation_json import OperationJson
-from data.data_config import *
+from util.operationexcle import OperationExcel
+from util.operation_json import OperationJson
+from config.data_config import *
 
 class GetData:
     def __int__(self):
