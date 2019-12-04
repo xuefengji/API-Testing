@@ -60,3 +60,23 @@ class GetData:
         col = get_result()
         self.table_data.write_excel(row,col,value)
 
+
+    #得到case依赖的数据
+    def get_case_depend_data(self,row):
+        col = get_case_depend()
+        case_depend_data = self.table_data.get_cell_value(row,col)
+        return case_depend_data
+
+    #得到依赖返回值数据
+    def get_response_depend_data(self,row):
+        col = get_data_depand()
+        response_depend = self.table_data.get_cell_value(row,col)
+        return response_depend
+
+    #获取case_id列的值
+    def get_case_id(self,col=None):
+        case_id_data = self.table_data.get_col_data(col)
+        return case_id_data
+
+
+

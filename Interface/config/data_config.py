@@ -7,10 +7,11 @@ class global_var:
     is_run = 3
     request_way = 4
     header = 5
-    data_depand = 6
-    request_data = 7
-    expact_result = 8
-    result = 9
+    case_depend = 6
+    responsere_depend = 7
+    data_depend = 8
+    expact_result = 9
+    result = 10
 
 #获取各个单元格数据的ID
 def get_case_id():
@@ -25,14 +26,17 @@ def get_url():
 def get_header():
     return global_var.header
 
+def get_case_depend():
+    return global_var.case_depend
+
 def get_request_way():
     return global_var.request_way
 
 def get_data_depand():
-    return global_var.data_depand
+    return global_var.responsere_depend
 
 def request_data():
-    return global_var.request_data
+    return global_var.data_depend
 
 def get_expact_result():
     return global_var.expact_result

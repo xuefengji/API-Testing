@@ -28,6 +28,15 @@ class OperationExcel:
         data = self.tables_data.cell_value(row,col)
         return data
 
+    #得到某一列的值
+    def get_col_data(self,col=None):
+        if col:
+            col_data = self.tables_data.col_values(col)
+        else:
+            col_data = self.tables_data.col_values(0)
+        return col_data
+
+
     #向excel中写入数据
     def write_excel(self,row,col,value):
         #打开要写入的excel
