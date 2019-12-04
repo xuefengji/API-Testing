@@ -30,10 +30,15 @@ class OperationExcel:
 
     #向excel中写入数据
     def write_excel(self,row,col,value):
+        #打开要写入的excel
         table = xlrd.open_workbook(self.file_name)
+        #copy一份新的
         write_data = copy(table)
+        #获取sheet表格
         sheet_data = write_data.get_sheet(0)
+        #写入数据
         sheet_data.write(row,col,value)
+        #表格保存
         write_data.save(self.file_name)
 
 
