@@ -2,16 +2,21 @@ from config.get_data import GetData
 from util.operationexcle import OperationExcel
 from base.run_method import RunMethod
 from util.commutil import CommUtil
-import json
+
 
 class RunMain:
+    #实例化一些基本的工具个data
     def __init__(self):
         self.opera_excel = OperationExcel()
         self.data = GetData()
         self.run_method = RunMethod()
         self.comm_util = CommUtil()
+
+    #主函数运行入口
     def go_on_run(self):
+        #获取数据行数
         rows_count = self.opera_excel.get_rows()
+        #循环数据，并取值进行post或get请求，并获取结果
         for i in range(1,rows_count):
             url = self.data.request_url(i)
             request_data = self.data.get_method_data(i)
