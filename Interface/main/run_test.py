@@ -1,6 +1,7 @@
 from config.get_data import GetData
 from util.operationexcle import OperationExcel
 from base.run_method import RunMethod
+import json
 
 class RunMain:
     def __init__(self):
@@ -19,7 +20,7 @@ class RunMain:
             is_run = self.data.is_run(i)
             if is_run:
                 res = self.run_method.run_main(request_way,url,request_data)
-            return res
+            return json.dumps(res,indent=2,sort_keys=True)
 
 
 
