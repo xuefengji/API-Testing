@@ -8,10 +8,11 @@ class global_var:
     request_way = 4
     header = 5
     data_depand = 6
-    data = 7
+    request_data = 7
     expact_result = 8
     result = 9
 
+#获取各个单元格数据的ID
 def get_case_id():
     return global_var.case_id
 
@@ -30,8 +31,8 @@ def get_request_way():
 def get_data_depand():
     return global_var.data_depand
 
-def get_data():
-    return global_var.data
+def request_data():
+    return global_var.request_data
 
 def get_expact_result():
     return global_var.expact_result
