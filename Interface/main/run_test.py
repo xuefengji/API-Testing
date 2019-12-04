@@ -26,23 +26,21 @@ class RunMain:
             expact_result = self.data.expact_result(i)
             # print(expact_result)
             if is_run:
-                flag = None
                 res = self.run_method.run_main(request_way,url,request_data)
                 # print(res)
                 # print(type(res['password']))
                 result = self.comm_util.comm_util(res['password'],expact_result)
                 if result:
-                    flag = 'Pass'
+                    self.data.write_data(i,'Pass')
                 else:
-                    flag = 'Fail'
-                return flag
+                    self.data.write_data(i,'Fail')
 
 
 
 
 if __name__=='__main__':
     run = RunMain()
-    print(run.go_on_run())
+    run.go_on_run()
 
 
 

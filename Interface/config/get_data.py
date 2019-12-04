@@ -53,3 +53,10 @@ class GetData:
         col = get_expact_result()
         expact = self.table_data.get_cell_value(row,col)
         return expact
+
+
+    #写入excel表格
+    def write_data(self,row,value):
+        col = get_result()
+        self.table_data.write_excel(row,col,value)
+
