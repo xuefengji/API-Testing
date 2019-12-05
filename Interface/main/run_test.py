@@ -22,18 +22,18 @@ class RunMain:
         rows_count = self.opera_excel.get_rows()
         #循环数据，并取值进行post或get请求，并获取结果
         for i in range(1,rows_count):
-            url = self.data.request_url(i)
-            request_data = self.data.get_method_data_depend(i)
-            # print(request_data)
-            header = self.data.get_is_header(i)
-            request_way = self.data.get_method_way(i)
             is_run = self.data.is_run(i)
-            case_depend = self.data.get_case_depend_data(i)
-            # print(case_depend)
-            expact_result = self.data.expact_result(i)
-            request_data_depend = self.data.get_method_data(i)
             # print(expact_result)
             if is_run:
+                url = self.data.request_url(i)
+                request_data = self.data.get_method_data_depend(i)
+                # print(request_data)
+                header = self.data.get_is_header(i)
+                request_way = self.data.get_method_way(i)
+                case_depend = self.data.get_case_depend_data(i)
+                # print(case_depend)
+                expact_result = self.data.expact_result(i)
+                request_data_depend = self.data.get_method_data(i)
                 #查看是否有数据依赖
                 if case_depend != '':
                     data_depend = DataDepend()
