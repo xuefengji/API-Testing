@@ -9,7 +9,7 @@ class OperationExcel:
             self.sheet_id = sheet_id
         else:
             #设置默认路径
-            self.file_name = '../datas/excel_data.xlsx'
+            self.file_name = '../datas/data_excel.xls'
             self.sheet_id = 0
         self.tables_data = self.get_data()
 

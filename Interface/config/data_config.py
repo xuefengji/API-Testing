@@ -10,8 +10,9 @@ class global_var:
     case_depend = 6
     responsere_depend = 7
     data_depend = 8
-    expact_result = 9
-    result = 10
+    requset_data = 9
+    expact_result = 10
+    result = 11
 
 #获取各个单元格数据的ID
 def get_case_id():
@@ -37,6 +38,9 @@ def get_data_depand():
 
 def request_data():
     return global_var.data_depend
+
+def get_method_request_data():
+    return global_var.requset_data
 
 def get_expact_result():
     return global_var.expact_result

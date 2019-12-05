@@ -41,12 +41,18 @@ class GetData:
         else:
             return is_header
 
-    #获取请求发送的数据
-    def get_method_data(self,row):
-        col = request_data()
+    #获取请求时的数据
+    def get_method_data_depend(self,row):
+        col = get_method_request_data()
         method_data = self.table_data.get_cell_value(row,col)
         data = OperationJson().get_login_data(method_data)
         return data
+
+    #获取请求发送的数据依赖
+    def get_method_data(self,row):
+        col = request_data()
+        method_data = self.table_data.get_cell_value(row,col)
+        return method_data
 
     #获取期望结果
     def expact_result(self,row):

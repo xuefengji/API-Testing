@@ -20,7 +20,7 @@ class DataDepend:
         url = self.data.request_url(row_count)
         is_run = self.data.is_run(row_count)
         request_way = self.data.get_method_way(row_count)
-        request_data = self.data.get_method_data(row_count)
+        request_data = self.data.get_method_data_depend(row_count)
         if is_run:
            res =  self.run_method.run_main(request_way,url,request_data)
         return res
