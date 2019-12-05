@@ -1,2 +1,2 @@
 # API-Testing
-接口测试学习与Django框架
+自动化接口测试学习与Django框架
