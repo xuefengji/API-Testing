@@ -3,6 +3,7 @@ from util.operationexcle import OperationExcel
 from base.run_method import RunMethod
 from util.commutil import CommUtil
 from config.data_depend import DataDepend
+from util.send_mail import SendMail
 
 class RunMain:
     #实例化一些基本的工具个data
@@ -11,9 +12,12 @@ class RunMain:
         self.data = GetData()
         self.run_method = RunMethod()
         self.comm_util = CommUtil()
+        self.send_mail = SendMail()
 
     #主函数运行入口
     def go_on_run(self):
+        pass_count = 0
+        fail_count = 0
         #获取数据行数
         rows_count = self.opera_excel.get_rows()
         #循环数据，并取值进行post或get请求，并获取结果
@@ -40,8 +44,11 @@ class RunMain:
                 result = self.comm_util.comm_util(res['status_code'],expact_result)
                 if result:
                     self.data.write_data(i,'Pass')
+                    pass_count += 1
                 else:
                     self.data.write_data(i,'Fail')
+                    fail_count += 1
+        self.send_mail.send_main(pass_count,fail_count)
 
 if __name__=='__main__':
     run = RunMain()
