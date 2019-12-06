@@ -4,6 +4,8 @@ from base.run_method import RunMethod
 from util.commutil import CommUtil
 from config.data_depend import DataDepend
 from util.send_mail import SendMail
+from util.operation_cookie import OperationCookie
+from util.operation_json import OperationJson
 
 class RunMain:
     #实例化一些基本的工具个data
@@ -28,7 +30,7 @@ class RunMain:
                 url = self.data.request_url(i)
                 request_data = self.data.get_method_data_depend(i)
                 # print(request_data)
-                header = self.data.get_is_header(i)
+                cookies = self.data.get_cookies(i)
                 request_way = self.data.get_method_way(i)
                 case_depend = self.data.get_case_depend_data(i)
                 # print(case_depend)
@@ -39,9 +41,16 @@ class RunMain:
                     data_depend = DataDepend()
                     response_depend = data_depend.get_depend_data(i,case_depend,0)
                     request_data[request_data_depend] = response_depend
-                res = self.run_method.run_main(request_way,url,request_data)
-                # print(res)
-                result = self.comm_util.comm_util(res['status_code'],expact_result)
+
+                #判断是否需要写入或读取cookie
+                if cookies == 'write':
+                    cookie_data = OperationCookie().get_cookie(request_way,url,request_data)
+                    OperationJson().write_json('../datas/cookie.json',cookie_data)
+                elif cookies == 'yes':
+                    cookie_data = OperationJson().get_cookie_data('../datas/cookies.json')
+
+                res = self.run_method.run_main(request_way, url, request_data)
+                result = self.comm_util.comm_util(str(res['code']),expact_result)
                 if result:
                     self.data.write_data(i,'Pass')
                     pass_count += 1

@@ -17,13 +17,22 @@ class OperationJson:
             with open(self.json_name)as fp:
                 data = json.load(fp)
                 return data
-        except Exception:
-            print('读取文件异常')
+        except Exception as e:
+            print(e)
 
     #获取login数据
     def get_login_data(self,id):
         data = self.data[id]
         return data
+
+    #读取cookie文件：
+    def get_cookie_data(self,filename):
+        try:
+            with open(filename)as fp:
+                cookie_data = json.load(fp)
+                return cookie_data
+        except Exception as e:
+            print(e)
 
     #获取邮箱信息
     def get_email_data(self):
@@ -32,8 +41,18 @@ class OperationJson:
                 data = json.load(fp)
                 # print(data)
                 return data
-        except Exception:
-            print('读取文件异常')
+        except Exception as e:
+            print(e)
+
+    #将json文件写入
+    def write_json(self,filename,result):
+        try:
+            with open(filename,'w')as f:
+                f.write(json.dumps(result))
+        except Exception as e:
+            print(e)
+
+
 
 
 

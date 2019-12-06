@@ -1,3 +1,4 @@
 {"login": {"username": "dcdcdcdc","password": 1111111},
-  "cookie": {"cookie": ""}
+  "cookie": {"cookie": ""},
+  "user": {"username": "admin","password": "password"}
 }

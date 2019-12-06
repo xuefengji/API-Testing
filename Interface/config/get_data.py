@@ -8,7 +8,6 @@ class GetData:
     #实例化时得到表格数据
     def __init__(self):
         self.table_data = OperationExcel()
-
     #获取是否运行
     def is_run(self,row):
         flag = None
@@ -40,6 +39,13 @@ class GetData:
             return None
         else:
             return is_header
+
+    #获取cookie(目前将header栏改为cookie)
+    def get_cookies(self,row):
+        col  = get_header()
+        is_cookie = self.table_data.get_cell_value(row,col)
+        return is_cookie
+
 
     #获取请求时的数据
     def get_method_data_depend(self,row):
