@@ -10,7 +10,7 @@ def Login(request):
         result = {}
         user = request.POST.get('username')
         password = request.POST.get('password')
-        result['status_code'] = '200'
+        result['code'] = '200'
         result['cookie'] = user+':'+password
         result = json.dumps(result)
         return HttpResponse(result,content_type='application/json;charset=utf-8')
@@ -31,7 +31,7 @@ def User(request):
     result = {}
     if cookie:
         data = cookie.split(':')
-        result['status_code'] = '200'
+        result['code'] = '200'
         result['mess'] = 'sucess'
         result['username'] = data[0]
         result['password'] = data[1]
