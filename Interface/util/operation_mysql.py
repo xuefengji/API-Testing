@@ -6,8 +6,8 @@ class OperationMysql:
         self.db = pymysql.connect(
         host="localhost",
         port=3306,
-        db='',
-        user='',
+        db='api_test',
+        user='root',
         password='',
         charset='utf8')
         self.cur = self.db.cursor()
