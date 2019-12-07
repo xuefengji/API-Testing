@@ -6,20 +6,33 @@ class OperationMysql:
         self.db = pymysql.connect(
         host="localhost",
         port=3306,
-        db='api_test',
+        db='test',
         user='root',
-        password='',
+        password='123456',
         charset='utf8')
         self.cur = self.db.cursor()
+        print('数据库链接成功')
 
     #获取数据
     def get_sql_one_data(self,sql):
         try:
             self.cur.execute(sql)
+            #获取字段信息
+            index =  self.cur.description
             data = self.cur.fetchone()
-            return data
+            # print(len(data))
+            #将字段与数据关联，形成字典
+            result = {}
+            for i in range(len(data)):
+                result[index[i][0]] = data[i]
+            # self.cur.close()
+            # print(type(result))
+            return result
         except Exception as e:
             print(e)
 
 
-
+if __name__=='__main__':
+    mysql = OperationMysql()
+    data = mysql.get_sql_one_data("select * from user where username='dasss'")
+    print(data)
