@@ -5,7 +5,6 @@ from demo import Demo
 
 
 class TestMethod(unittest.TestCase):
-
     def setUp(self):
         self.url = 'http://127.0.0.1:8000/login/'
         self.run = Run_Main()

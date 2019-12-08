@@ -1,5 +1,17 @@
 # unittest
 
+## Unittest使用
+
+![使用unittest](E:\API-Testing\images\使用unittest.png)
+
+1、新建类时需要继承unittest.TestCase
+
+2、setUP函数：在每个case执行之前调用
+
+3、tearDown函数：在每次case执行后调用
+
+3、test_01和test_03为添加的case：case的命名必须以test开头
+
 ## 运行case
 
 1、unittest.main()
@@ -29,7 +41,7 @@
 
 # case执行顺序
 
-根据测试case的命令进行升序执行
+根据测试case的命名进行升序执行
 
 # HTMLTestRunner
 

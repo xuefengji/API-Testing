@@ -7,8 +7,6 @@ class Demo(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         print('这是类结束的方法')
-
-
     #每次方法前调用，在每个测试方法之前调用
     def setUp(self):
         print('每次方法前调用')
