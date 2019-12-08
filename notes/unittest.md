@@ -12,6 +12,8 @@
 
 3、test_01和test_03为添加的case：case的命名必须以test开头
 
+4、setUpClass和tearDownClass是类的方法，在类的开始和结束被调用，只会被调用一次
+
 ## 运行case
 
 1、unittest.main()
