@@ -11,7 +11,6 @@ class OperationMysql:
         password='123456',
         charset='utf8')
         self.cur = self.db.cursor()
-        print('数据库链接成功')
 
     #获取数据
     def get_sql_one_data(self,sql):
