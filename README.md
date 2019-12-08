@@ -1,5 +1,5 @@
 # API-Testing
-接口测试与Django框架学习
+接口测试自动化与Django框架学习
 ## 实现的主要功能介绍：
 + Django开发简单接口功能
 + 操作excel，获取接口用例
