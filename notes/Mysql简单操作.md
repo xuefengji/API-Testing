@@ -6,7 +6,7 @@ pip install PyMySQL
 
 2、数据库链接
 
-![数据库连接](E:\API-Testing\images\数据库连接.png)
+![数据库连接](../images/数据库连接.png)
 
 host：数据库地址
 
@@ -24,7 +24,7 @@ db.cursor()：设置游标的位置
 
 3、查询数据库数据
 
-![sql操作](E:\API-Testing\images\sql操作.png)
+![sql操作](../images/sql操作.png)
 
 cur.execute(sql)：执行sql语句，查询数据库的数据
 
