@@ -14,7 +14,7 @@ python manage.py startapp web(app应用名称)
 
 + 新建app后，需要在setting中添加该应用
 
-![添加app](../images添加app.png)
+![添加app](../images/添加app.png)
 
 + 开发简单的post和get接口步骤：
 
