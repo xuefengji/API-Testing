@@ -2,7 +2,7 @@
 
 邮件发送设置
 
-![mail](E:\API-Testing\images\mail.png)
+![mail](../images/mail.png)
 
 from_uer：发件人地址
 
