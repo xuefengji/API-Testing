@@ -2,7 +2,7 @@
 
 ## Unittest使用
 
-![使用unittest](E:\API-Testing\images\使用unittest.png)
+![使用unittest](../images/使用unittest.png)
 
 1、新建类时需要继承unittest.TestCase
 
