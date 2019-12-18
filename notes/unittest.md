@@ -43,7 +43,9 @@
 
 # case执行顺序
 
-根据测试case的命名进行升序执行
+1、unittest.main根据测试case的命名进行升序执行
+2、@unittest.skip()跳过某个case
+3、使用容器时unittest.TestSuite，根据添加的顺序进行执行
 
 # HTMLTestRunner
 
