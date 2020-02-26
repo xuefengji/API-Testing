@@ -10,7 +10,7 @@ pip install PyMySQL
 
 host：数据库地址
 
-port：端口号，默认为3306
+port：端口号，默认为 3306
 
 db：要连接的数据库名
 
@@ -26,7 +26,7 @@ db.cursor()：设置游标的位置
 
 ![sql操作](../images/sql操作.png)
 
-cur.execute(sql)：执行sql语句，查询数据库的数据
+cur.execute(sql)：执行 sql 语句，查询数据库的数据
 
 cur.fetchone()：匹配其中的一条数据
 
