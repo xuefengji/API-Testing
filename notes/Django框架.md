@@ -2,7 +2,7 @@
 
 ## 安装
 
-pip install django（基于python3）
+pip install django（基于 python3）
 
 ## 启动
 
@@ -10,7 +10,7 @@ pip install django（基于python3）
 
 ## 新建app应用
 
-python manage.py startapp web(app应用名称)
+python manage.py startapp web (app 应用名称)
 
 + 新建 app 后，需要在 setting 中添加该应用
 
