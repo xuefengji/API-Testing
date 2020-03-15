@@ -1,6 +1,6 @@
 # Mysql简单操作
 
-1、python3 安装PyMySQL库
+1、python3 安装 PyMySQL 库
 
 pip install PyMySQL
 
