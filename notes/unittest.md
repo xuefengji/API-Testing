@@ -10,7 +10,7 @@
 
 3、tearDown 函数：在每次 case 执行后调用
 
-3、test_01 和 test_03 为添加的 case：case  的命名必须以test 开头
+3、test_01 和 test_03 为添加的 case：case  的命名必须以 test 开头
 
 4、setUpClass 和 tearDownClass 是类的方法，在类的开始和结束被调用，只会被调用一次
 
